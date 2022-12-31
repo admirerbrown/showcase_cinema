@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-color: bisque;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n\n.quote {\n  display: flex;\n  text-align: center;\n  width: 70%;\n  justify-content: center;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,wBAAwB;EACxB,YAAY;EACZ,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,kBAAkB;EAClB,UAAU;EACV,uBAAuB;AACzB","sourcesContent":["body {\n  background-color: bisque;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n\n.quote {\n  display: flex;\n  text-align: center;\n  width: 70%;\n  justify-content: center;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  padding: 0;\n  margin: 0;\n  font-size: 24px;\n}\n\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(1, 300px);\n  justify-content: center;\n  gap: 15px;\n  width: 100%;\n  height: 100%;\n  padding: 15px;\n}\n\n.grid-item {\n  display: flex;\n  align-items: center;\n  /* background-color: goldenrod; */\n  flex-direction: column;\n}\n\n.movie-cover {\n  display: flex;\n  height: 300px;\n  width: 300px;\n  background-repeat: no-repeat;\n  justify-content: center;\n}\n\n.btn-btn {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  font-size: 18px;\n  padding: 10px;\n  margin: 10px;\n  border-radius: 10px;\n}\n\n.movie-title {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 30px;\n  margin: 10px;\n}\n\n.likes-num {\n  margin-top: 5px;\n  font-size: 18px;\n}\n\n.mov-title {\n  display: flex;\n  width: 40%;\n}\n\n/* desktop version */\n@media screen and (min-width: 768px) {\n  .grid-container {\n    background-color: teal;\n    grid-template-columns: repeat(5, 1fr);\n    justify-items: center;\n  }\n\n  .btn-btn {\n    font-size: 22px;\n    padding: 10px;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,uCAAuC;EACvC,uBAAuB;EACvB,SAAS;EACT,WAAW;EACX,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,iCAAiC;EACjC,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,YAAY;EACZ,4BAA4B;EAC5B,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,YAAY;EACZ,eAAe;EACf,aAAa;EACb,YAAY;EACZ,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,6BAA6B;EAC7B,SAAS;EACT,YAAY;AACd;;AAEA;EACE,eAAe;EACf,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,UAAU;AACZ;;AAEA,oBAAoB;AACpB;EACE;IACE,sBAAsB;IACtB,qCAAqC;IACrC,qBAAqB;EACvB;;EAEA;IACE,eAAe;IACf,aAAa;EACf;AACF","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  font-size: 24px;\n}\n\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(1, 300px);\n  justify-content: center;\n  gap: 15px;\n  width: 100%;\n  height: 100%;\n  padding: 15px;\n}\n\n.grid-item {\n  display: flex;\n  align-items: center;\n  /* background-color: goldenrod; */\n  flex-direction: column;\n}\n\n.movie-cover {\n  display: flex;\n  height: 300px;\n  width: 300px;\n  background-repeat: no-repeat;\n  justify-content: center;\n}\n\n.btn-btn {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  font-size: 18px;\n  padding: 10px;\n  margin: 10px;\n  border-radius: 10px;\n}\n\n.movie-title {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 30px;\n  margin: 10px;\n}\n\n.likes-num {\n  margin-top: 5px;\n  font-size: 18px;\n}\n\n.mov-title {\n  display: flex;\n  width: 40%;\n}\n\n/* desktop version */\n@media screen and (min-width: 768px) {\n  .grid-container {\n    background-color: teal;\n    grid-template-columns: repeat(5, 1fr);\n    justify-items: center;\n  }\n\n  .btn-btn {\n    font-size: 22px;\n    padding: 10px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -505,6 +505,113 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/modules/dynamic_display.js":
+/*!****************************************!*\
+  !*** ./src/modules/dynamic_display.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchMovies": () => (/* binding */ fetchMovies),
+/* harmony export */   "showMovies": () => (/* binding */ showMovies)
+/* harmony export */ });
+// TODO:create a list to represent the list to be returned by the server.
+// TODO:dynamically display each item in the list onto the page
+// TODO: ensure there are no errors when displaying the items.
+
+// const movieList = async () => {
+// const url = 'https://api.tvmaze.com/shows';
+// const response = await fetch(url);
+// const res = await response.json();
+// const movies = res;
+// // console.log(movies[0]);
+
+//   const showMovie = document.querySelector('.grid-container');
+
+//   showMovie.innerHTML += movies.map((movie) => `<div class="grid-item">
+//                 <div class="movie-cover">
+//                     <img src=${movie.image.medium}>
+//                 </div>
+//                 <div class="movie-title">
+//                     <p class="likes-num mov-title">${movie.name} </p>
+//                     <div class="like-count">
+//                         <i class="fa-regular fa-heart"></i><br>
+//                         <p class="likes-num">${movie.runtime} likes</p>
+//                     </div>
+
+//                 </div>
+
+//                 <button class="btn-btn">Comments</button>
+//                 <button class="btn-btn">Reservations</button>
+//             </div>`).join('');
+// };
+
+// TODO: make call to api
+
+// export default movieList;
+
+// fetch data from the movie api...
+const fetchMovies = async () => {
+  const url = 'https://api.tvmaze.com/shows';
+  const response = await fetch(url);
+  const res = await response.json();
+  const movies = res;
+  return movies;
+  // console.log(movies);
+};
+
+const showMovies = (movieList) => {
+  const showMovie = document.querySelector('.grid-container');
+
+  showMovie.innerHTML += movieList.map((movie) => `<div class="grid-item">
+                <div class="movie-cover">
+                    <img src=${movie.image.medium}>
+                </div>
+                <div class="movie-title">
+                    <p class="likes-num mov-title">${movie.name} </p>
+                    <div class="like-count">
+                        <i class="fa-regular fa-heart"></i><br>
+                        <p class="likes-num">${movie.runtime} likes</p>
+                    </div>
+
+                </div>
+
+                <button class="btn-btn">Comments</button>
+                <button class="btn-btn">Reservations</button>
+            </div>`).join('');
+};
+
+// export const createMovieGridItem = (movie) => `<div class="grid-item">
+//                 <div class="movie-cover">
+//                     <img src=${movie.image.medium}>
+//                 </div>
+//                 <div class="movie-title">
+//                     <p class="likes-num mov-title">${movie.name} </p>
+//                     <div class="like-count">
+//                         <i class="fa-regular fa-heart"></i><br>
+//                         <p class="likes-num">${movie.runtime} likes</p>
+//                     </div>
+
+//                 </div>
+
+//                 <button class="btn-btn">Comments</button>
+//                 <button class="btn-btn">Reservations</button>
+//             </div>`;
+
+// export const renderMovieGrid = (movies) => {
+//   const showMovie = document.querySelector('.grid-container');
+//   showMovie.innerHTML += movies.map(createMovieGridItem).join('');
+// };
+
+// export const MovieList = async () => {
+//   const movies = await fetchMovies();
+//   renderMovieGrid(movies);
+// };
+
+
 /***/ })
 
 /******/ 	});
@@ -588,7 +695,17 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _modules_dynamic_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dynamic_display.js */ "./src/modules/dynamic_display.js");
 
+// import movieList from './modules/dynamic_display.js';
+
+
+// movieList();
+const movie = (0,_modules_dynamic_display_js__WEBPACK_IMPORTED_MODULE_1__.fetchMovies)();
+(0,_modules_dynamic_display_js__WEBPACK_IMPORTED_MODULE_1__.showMovies)(movie);
+// createMovieGridItem();
+// renderMovieGrid();
+// MovieList();
 })();
 
 /******/ })()
